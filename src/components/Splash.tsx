@@ -4,6 +4,7 @@ import { publicUrl } from '../publicUrl';
 
 export default function Splash({ onDone }: { onDone: () => void }) {
   const [leaving, setLeaving] = useState(false);
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const onDoneRef = useRef(onDone);
   onDoneRef.current = onDone;
 
@@ -46,17 +47,17 @@ export default function Splash({ onDone }: { onDone: () => void }) {
           className="h-24 w-24"
         />
         <p className="mt-6 font-['Outfit'] text-3xl font-semibold tracking-tight">Ikenna Ihetu</p>
-        <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
-          Computer science · Helsinki
+        <p className="relative mt-3 font-['Outfit'] text-sm font-semibold tracking-[0.14em] text-[#d6cfc4]">
+          <span aria-hidden>IT Solutions</span>
+          <motion.span
+            className="absolute inset-y-0 left-0 overflow-hidden whitespace-nowrap text-[#1c1917]"
+            initial={{ width: reduced ? '100%' : '0%' }}
+            animate={{ width: '100%' }}
+            transition={{ duration: reduced ? 0 : 1.2, ease: 'easeInOut' }}
+          >
+            IT Solutions
+          </motion.span>
         </p>
-        <div className="mt-8 h-1 w-40 overflow-hidden rounded-full bg-[#e7e0d6]">
-          <motion.div
-            className="h-full w-full origin-left rounded-full bg-[#1c1917]"
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: leaving ? 1 : 0.92 }}
-            transition={{ duration: leaving ? 0.25 : 1.15, ease: 'easeInOut' }}
-          />
-        </div>
       </div>
     </motion.div>
   );

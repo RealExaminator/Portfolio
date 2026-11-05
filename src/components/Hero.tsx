@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 pb-24 pt-28 lg:grid-cols-[1.15fr_0.85fr] lg:pb-28 lg:pt-36">
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <p className="mb-6 text-sm font-semibold uppercase tracking-[0.18em] text-[#c2410c]">
-            Computer science · Helsinki
+            Technical Solutions Specialist
           </p>
           <h1 className="font-['Outfit'] text-5xl font-semibold leading-[0.95] tracking-tight sm:text-7xl">
             Ikenna Ihetu
