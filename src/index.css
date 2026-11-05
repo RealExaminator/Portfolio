@@ -6,7 +6,15 @@
   }
 
   section[id] {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: calc(4rem + 1px);
+  }
+
+  #top {
+    scroll-margin-top: 0;
+  }
+
+  #contact {
+    min-height: calc(100dvh - 4rem - 1px);
   }
 
   body {
