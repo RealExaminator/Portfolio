@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
-import { publicUrl } from '../publicUrl';
 
 export default function Splash({ onDone }: { onDone: () => void }) {
   const [leaving, setLeaving] = useState(false);
@@ -41,12 +40,7 @@ export default function Splash({ onDone }: { onDone: () => void }) {
       aria-label="Loading"
     >
       <div className="flex w-full max-w-xs origin-center scale-[1.7] flex-col items-center px-6 text-center sm:scale-[2.75]">
-        <img
-          src={publicUrl('favicon.png')}
-          alt=""
-          className="h-24 w-24"
-        />
-        <p className="mt-6 font-['Outfit'] text-3xl font-semibold tracking-tight">Ikenna Ihetu</p>
+        <p className="font-['Outfit'] text-3xl font-semibold tracking-tight">Ikenna Ihetu</p>
         <p className="relative mt-3 font-['Outfit'] text-sm font-semibold tracking-[0.14em] text-[#d6cfc4]">
           <span aria-hidden>IT Solutions</span>
           <motion.span
