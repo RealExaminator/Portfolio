@@ -40,11 +40,11 @@ export default function Splash({ onDone }: { onDone: () => void }) {
       aria-live="polite"
       aria-label="Loading"
     >
-      <div className="flex w-full max-w-xs flex-col items-center px-6 text-center">
+      <div className="flex w-full flex-col items-center px-6 text-center">
         <img
           src={publicUrl('favicon.png')}
           alt=""
-          className="h-24 w-24"
+          className="h-[min(78vw,32rem)] w-[min(78vw,32rem)]"
         />
         <p className="mt-6 font-['Outfit'] text-3xl font-semibold tracking-tight">Ikenna Ihetu</p>
         <p className="relative mt-3 font-['Outfit'] text-sm font-semibold tracking-[0.14em] text-[#d6cfc4]">
