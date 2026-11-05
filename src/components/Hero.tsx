@@ -67,7 +67,7 @@ export default function Hero() {
             className="w-full"
           />
           <figcaption className="border-t border-[#e4d9cc] px-5 py-4 text-sm text-stone-600">
-            Interested in IT service management and application support.
+            Cheers to new beginnings. Ready to bring fresh energy and tech solutions to your team.
           </figcaption>
         </motion.figure>
       </div>
