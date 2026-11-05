@@ -1,6 +1,6 @@
-# Ikenna Ihetu — portfolio
+# My Portfolio
 
-A single-page portfolio for job applications. It introduces Ikenna, shows three projects, and links to email, LinkedIn, and GitHub.
+A single-page portfolio for job applications. It introduces me shortly, shows some projects I've done, and links to email, LinkedIn, and GitHub.
 
 ## Run locally
 
