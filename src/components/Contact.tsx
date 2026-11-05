@@ -22,11 +22,19 @@ const links = [
     icon: Github,
     external: true,
   },
+  ];
+
+const cvs = [
   {
     href: '',
-    label: 'File',
-    value: 'Download the PDF',
-    icon: FileText,
+    label: 'English',
+    value: '',
+    download: '',
+  },
+  {
+    href: '',
+    label: 'Suomi',
+    value: '',
     download: '',
   },
 ];
@@ -44,14 +52,13 @@ export default function Contact() {
             I am looking for frontend and junior product-engineering roles, internships included. The email goes straight to me.
           </p>
         </div>
-        <div className="mt-12 grid gap-3 sm:grid-cols-2">
+        <div className="mt-12 grid gap-3 lg:grid-cols-3">
           {links.map((link) => {
             const Icon = link.icon;
             return (
               <a
                 key={link.label}
                 href={link.href}
-                download={link.download}
                 target={link.external ? '_blank' : undefined}
                 rel={link.external ? 'noopener noreferrer' : undefined}
                 className="group flex items-center gap-4 rounded-2xl bg-white/5 px-5 py-5 ring-1 ring-white/10 transition-colors hover:bg-[#c2410c] hover:ring-[#c2410c]"
@@ -66,6 +73,24 @@ export default function Contact() {
               </a>
             );
           })}
+        </div>
+        <div className="mt-3 grid gap-3 sm:grid-cols-2">
+          {cvs.map((cv) => (
+            <a
+              key={cv.download}
+              href={cv.href}
+              download={cv.download}
+              className="group flex items-center gap-4 rounded-2xl bg-white/5 px-5 py-5 ring-1 ring-white/10 transition-colors hover:bg-[#c2410c] hover:ring-[#c2410c]"
+            >
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 group-hover:bg-white/20">
+                <FileText size={18} />
+              </span>
+              <span className="min-w-0">
+                <span className="block text-xs uppercase tracking-[0.14em] text-stone-400 group-hover:text-orange-100">{cv.label}</span>
+                <span className="mt-1 block break-words font-semibold">{cv.value}</span>
+              </span>
+            </a>
+          ))}
         </div>
       </div>
     </section>
