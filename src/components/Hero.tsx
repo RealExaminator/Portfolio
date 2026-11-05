@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { publicUrl } from '../publicUrl';
+import { useCopyEmail } from '../copyEmail';
 
 const portrait = publicUrl('assets/aistudio/me_989522cc.PNG');
 
@@ -12,9 +13,11 @@ const facts = [
 ];
 
 export default function Hero() {
+  const email = useCopyEmail();
+
   return (
     <section id="top" className="bg-[#f7f4ef]">
-      <div className="mx-auto grid max-w-6xl items-end gap-14 px-6 pb-24 pt-28 lg:grid-cols-[1.15fr_0.85fr] lg:pb-28 lg:pt-36">
+      <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 pb-24 pt-28 lg:grid-cols-[1.15fr_0.85fr] lg:pb-28 lg:pt-36">
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <p className="mb-6 text-sm font-semibold uppercase tracking-[0.18em] text-[#c2410c]">
             Computer science · Helsinki
@@ -30,9 +33,14 @@ export default function Hero() {
               Selected work
               <ArrowRight size={16} />
             </a>
-            <a href="mailto:ikennaihetu40@gmail.com" className="rounded-full border border-stone-300 bg-white/70 px-6 py-3 text-sm font-semibold hover:border-[#1c1917] transition-colors">
-              ikennaihetu40@gmail.com
-            </a>
+            <button
+              type="button"
+              onClick={email.copy}
+              className="rounded-full border border-stone-300 bg-white/70 px-6 py-3 text-sm font-semibold hover:border-[#1c1917] transition-colors"
+              aria-live="polite"
+            >
+              {email.label}
+            </button>
           </div>
           <dl className="mt-14 grid max-w-xl grid-cols-2 overflow-hidden rounded-2xl border border-[#e4d9cc] bg-white/60">
             {facts.map(([label, value], index) => (
@@ -51,16 +59,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
+          className="overflow-hidden rounded-[2rem] border border-[#e4d9cc] bg-white/50"
         >
-          <div className="relative pb-4 pl-4">
-            <div className="absolute bottom-0 left-0 h-[88%] w-[88%] rounded-[2rem] bg-[#c2410c]" aria-hidden />
-            <img
-              src={portrait}
-              alt="Ikenna Ihetu"
-              className="relative w-full rounded-[2rem] shadow-[0_30px_60px_-30px_rgba(28,25,23,0.45)]"
-            />
-          </div>
-          <figcaption className="mt-4 text-sm text-stone-500">
+          <img
+            src={portrait}
+            alt="Ikenna Ihetu"
+            className="w-full"
+          />
+          <figcaption className="border-t border-[#e4d9cc] px-5 py-4 text-sm text-stone-600">
             Interested in IT service management and application support.
           </figcaption>
         </motion.figure>

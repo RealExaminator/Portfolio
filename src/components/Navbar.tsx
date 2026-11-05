@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Github, Linkedin, Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { useCopyEmail } from '../copyEmail';
 
 const navLinks = [
   { name: 'Work', href: '#work' },
@@ -12,6 +13,7 @@ const navLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const email = useCopyEmail();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 12);
@@ -74,9 +76,9 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
-            <a href="mailto:ikennaihetu40@gmail.com" className="pt-2 text-sm font-semibold text-[#c2410c]">
-              ikennaihetu40@gmail.com
-            </a>
+            <button type="button" onClick={email.copy} className="pt-2 text-left text-sm font-semibold text-[#c2410c]" aria-live="polite">
+              {email.label}
+            </button>
           </div>
         </motion.div>
       )}

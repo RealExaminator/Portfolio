@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { motion, useScroll, useSpring } from 'motion/react';
 import Navbar from './components/Navbar';
+import Splash from './components/Splash';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -9,6 +11,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -22,6 +25,8 @@ export default function App() {
         className="fixed top-0 left-0 right-0 h-1 bg-[#c2410c] origin-left z-50"
         style={{ scaleX }}
       />
+
+      {loading && <Splash onDone={() => setLoading(false)} />}
 
       <Navbar />
 
