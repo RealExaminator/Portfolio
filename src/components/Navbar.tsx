@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Github, Linkedin, Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { publicUrl } from '../publicUrl';
 
 const navLinks = [
   { name: 'Work', href: '#work' },
@@ -26,9 +27,9 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto max-w-6xl px-6">
-        <nav className="flex h-16 items-center justify-between gap-6">
-          <a href="#top" className="font-['Outfit'] text-lg font-semibold tracking-tight">
-            Ikenna Ihetu
+        <nav className="flex h-20 items-center justify-between gap-6">
+          <a href="#top" className="shrink-0" aria-label="Ikenna Ihetu">
+            <img src={publicUrl('logo.png')} alt="Ikenna Ihetu, UI designer" className="h-14 w-auto rounded-md" />
           </a>
 
           <div className="hidden items-center gap-8 text-sm font-medium text-stone-600 md:flex">
@@ -66,7 +67,7 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute left-0 right-0 top-16 border-b border-[#e7e0d6] bg-[#f7f4ef] shadow-[0_24px_40px_-24px_rgba(28,25,23,0.45)] md:hidden"
+          className="absolute left-0 right-0 top-20 border-b border-[#e7e0d6] bg-[#f7f4ef] shadow-[0_24px_40px_-24px_rgba(28,25,23,0.45)] md:hidden"
         >
           <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-6">
             {navLinks.map((link) => (
