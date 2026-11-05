@@ -16,8 +16,8 @@ export default function Hero() {
   const email = useCopyEmail();
 
   return (
-    <section id="top" className="bg-[#f7f4ef]">
-      <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 pb-24 pt-28 lg:grid-cols-[1.15fr_0.85fr] lg:pb-28 lg:pt-36">
+    <section id="top" className="flex min-h-dvh flex-col justify-center bg-[#f7f4ef] pt-16">
+      <div className="mx-auto grid w-full max-w-6xl items-center gap-14 px-6 py-10 lg:grid-cols-[1.15fr_0.85fr]">
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <p className="mb-6 text-sm font-semibold uppercase tracking-[0.18em] text-[#c2410c]">
             Technical Solutions Specialist
