@@ -17,13 +17,13 @@ export default function Hero() {
       <div className="mx-auto grid max-w-6xl items-end gap-14 px-6 pb-24 pt-28 lg:grid-cols-[1.15fr_0.85fr] lg:pb-28 lg:pt-36">
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <p className="mb-6 text-sm font-semibold uppercase tracking-[0.18em] text-[#c2410c]">
-            Frontend developer · Helsinki
+            Computer science · Helsinki
           </p>
           <h1 className="font-['Outfit'] text-5xl font-semibold leading-[0.95] tracking-tight sm:text-7xl">
             Ikenna Ihetu
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-stone-600">
-            I design and build interfaces that feel finished. Computer science graduate, now in the IT master's at Åbo Akademi, working across React, UI, and full-stack projects.
+            Bachelor of Science in Computer Science, now in the Information Technology master's at Åbo Akademi. I build software and applications, work with client-server systems, and troubleshoot technical problems.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a href="#work" className="inline-flex items-center gap-2 rounded-full bg-[#1c1917] px-6 py-3 text-sm font-semibold text-[#f6f3ee] hover:bg-[#c2410c] transition-colors">
@@ -61,7 +61,7 @@ export default function Hero() {
             />
           </div>
           <figcaption className="mt-4 text-sm text-stone-500">
-            Open to internships and junior roles in Finland.
+            Interested in IT service management and application support.
           </figcaption>
         </motion.figure>
       </div>

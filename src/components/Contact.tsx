@@ -1,4 +1,4 @@
-import { FileText, Github, Linkedin, Mail } from 'lucide-react';
+import { FileText, Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { publicUrl } from '../publicUrl';
 
 const links = [
@@ -7,6 +7,12 @@ const links = [
     label: 'Email',
     value: 'ikennaihetu40@gmail.com',
     icon: Mail,
+  },
+  {
+    href: 'tel:',
+    label: 'Phone',
+    value: '',
+    icon: Phone,
   },
   {
     href: 'https://www.linkedin.com/in/ikenna-ihetu/',
@@ -49,10 +55,10 @@ export default function Contact() {
             If a role fits, write to me.
           </h2>
           <p className="max-w-md text-stone-400">
-            I am looking for frontend and junior product-engineering roles, internships included. The email goes straight to me.
+            I am interested in IT service management, application support, and software development. Email and phone both reach me.
           </p>
         </div>
-        <div className="mt-12 grid gap-3 lg:grid-cols-3">
+        <div className="mt-12 grid gap-3 sm:grid-cols-2">
           {links.map((link) => {
             const Icon = link.icon;
             return (

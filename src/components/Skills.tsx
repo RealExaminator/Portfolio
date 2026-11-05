@@ -1,21 +1,21 @@
 const groups = [
   {
-    title: 'Build with',
-    note: 'The day-to-day interface stack.',
+    title: 'Programming',
+    note: 'Scripting and application code.',
     accent: 'bg-[#c2410c]',
-    skills: ['React', 'JavaScript', 'HTML & CSS', 'Tailwind', 'React Native', 'Expo'],
+    skills: ['Python', 'Java', 'JavaScript', 'R'],
   },
   {
-    title: 'Also use',
-    note: 'When the work goes past the screen.',
+    title: 'Web and databases',
+    note: 'Applications, APIs, and the data behind them.',
     accent: 'bg-[#1c1917]',
-    skills: ['Python', 'Django', 'Java', 'SQL', 'Supabase', 'Git'],
+    skills: ['React', 'Django', 'REST APIs', 'SQL (basics)'],
   },
   {
-    title: 'Interested in',
-    note: 'Where I keep going.',
+    title: 'Platforms and practice',
+    note: 'Systems, documentation, and troubleshooting.',
     accent: 'bg-[#a89078]',
-    skills: ['UI design', 'REST APIs', 'Machine learning', 'Linux'],
+    skills: ['Windows', 'Linux (basics)', 'Microsoft Azure (basics)', 'Git', 'Client-server architecture', 'Technical documentation'],
   },
 ];
 
@@ -23,7 +23,7 @@ export default function Skills() {
   return (
     <section id="skills" className="bg-[#efe6da]">
       <div className="mx-auto max-w-6xl px-6 py-24 lg:py-28">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#c2410c]">03 — Tools</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#c2410c]">03 — Skills</p>
         <h2 className="mt-4 font-['Outfit'] text-4xl font-semibold tracking-tight sm:text-5xl">What I use</h2>
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {groups.map((group) => (

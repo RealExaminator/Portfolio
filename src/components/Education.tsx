@@ -1,42 +1,30 @@
 const education = [
   {
     period: '2022 – 2027',
-    title: 'M.Sc. Information Technology',
+    title: 'Computer Science & Information Technology',
     place: 'Åbo Akademi University',
-    note: 'Ongoing. Advanced information systems and current digital technology.',
-  },
-  {
-    period: 'Completed 2026',
-    title: 'B.Sc. Computer Science',
-    place: 'Åbo Akademi University',
-    note: 'Programming, data structures, and client-server architecture. Thesis on game data and machine learning.',
+    note: 'B.Sc. in Computer Science, completed. M.Sc. in Information Technology, in progress.',
   },
 ];
 
 const experience = [
   {
-    period: '2023 – present',
-    title: 'Freelance UI and frontend',
-    place: 'Independent / university internship',
-    note: 'Designing and building websites and mobile screens, from the layout through to a working interface.',
+    period: '2026',
+    title: 'Terminal worker',
+    place: 'FedEx, Turku Airport',
+    note: 'Cargo terminal work under tight deadlines. Accurate, independent, and part of the team.',
   },
   {
-    period: '2023 – present',
-    title: 'Warehouse operative',
-    place: 'FedEx Express, Turku Airport',
-    note: 'Handling at an international gateway. Fast, team-based logistics work.',
+    period: '—',
+    title: 'Warehouse worker',
+    place: 'Henkilöstöliiga & Me Group AB',
+    note: 'Reliable daily work, with precision and consistent routines.',
   },
   {
     period: '2021',
-    title: 'Leader',
+    title: 'Squad leader',
     place: 'Finnish Defence Forces',
-    note: 'Responsibility and decisions in a high-pressure setting.',
-  },
-  {
-    period: 'Earlier',
-    title: 'Warehouse worker',
-    place: 'Henkilöstöliiga & Me Group AB',
-    note: 'Team work focused on reliability and pace.',
+    note: 'Responsibility for the squad’s work, and calm decisions under pressure.',
   },
 ];
 

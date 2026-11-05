@@ -22,8 +22,8 @@ const projects: Project[] = [
     id: 'webshop',
     title: 'WebShop',
     category: 'React and Django',
-    description: 'A marketplace where people list items, search the catalog, and check out from a cart.',
-    longDescription: 'I built the shop front in React and the API in Django. Accounts, listings, the cart, and checkout are real flows, and the catalog is presented like a store you could put in a portfolio. The source is public.',
+    description: 'A full-stack web application with React on the front and Django on the server.',
+    longDescription: 'I developed the application in React and Django. It uses REST APIs, client-server data flow, and database logic, and I debugged it end to end. The source is public.',
     images: [publicUrl('assets/webshop-browse.png')],
     imageAlt: 'WebShop catalog, with product photos, search, and prices',
     tags: ['React', 'Django', 'JavaScript', 'Python'],
@@ -32,23 +32,23 @@ const projects: Project[] = [
   {
     id: 'studyplanner',
     title: 'Study Planner',
-    category: 'React Native',
-    description: 'A phone app for planning study time, with a focus timer and calendar sync.',
-    longDescription: 'A student project for staying on top of study hours. The interface is dark, the setup walks through a few choices, and the profile screen sets a focus length and the hours you want to work.',
+    category: 'Mobile application',
+    description: 'A mobile application from a software project, built around application logic and a usable interface.',
+    longDescription: 'I designed and implemented the app as part of a practical software engineering project. The work focused on application logic, modular interface pieces, and usability.',
     images: [
       publicUrl('assets/aistudio/Studyplanner1_48d80712.jpg'),
       publicUrl('assets/aistudio/Studyplanner2_bb0325ed.jpg'),
     ],
     imageAlt: 'Study Planner profile screen on a phone',
     frame: 'phone',
-    tags: ['React Native', 'Expo', 'UI'],
+    tags: ['Mobile', 'Application logic', 'UI'],
   },
   {
     id: 'thesis',
     title: "Bachelor's thesis",
     category: 'Machine learning',
     description: 'How gameplay data from Teamfight Tactics can be turned into strategic recommendations.',
-    longDescription: 'The thesis, written at Åbo Akademi, looks at game data as a strategy problem. I processed match data in Python and used machine learning to look for patterns a player could act on. The degree was awarded in January 2026.',
+    longDescription: 'The bachelor’s thesis, written at Åbo Akademi, treats Teamfight Tactics match data as a strategy problem. I processed the data in Python and used machine learning to look for patterns a player could act on.',
     images: [publicUrl('assets/tft-strategy-mock.jpg')],
     imageAlt: 'Abstract hex board used as a stand-in for the Teamfight Tactics thesis',
     cover: 'Teamfight Tactics',
@@ -122,7 +122,7 @@ export default function Projects() {
             </h2>
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-stone-500">
-            A shop, a phone app, and the thesis behind the degree.
+            A full-stack shop, a mobile app, and the bachelor’s thesis.
           </p>
         </div>
 

@@ -1,7 +1,7 @@
 const languages = [
   ['Swedish', 'Native'],
-  ['Finnish', 'Excellent'],
-  ['English', 'Excellent'],
+  ['Finnish', 'Excellent · full professional'],
+  ['English', 'Excellent · full professional'],
   ['German', 'Good'],
 ];
 
@@ -13,15 +13,15 @@ export default function About() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-300">02 — About</p>
             <h2 className="mt-4 font-['Outfit'] text-4xl font-semibold tracking-tight sm:text-5xl">
-              A builder who cares how it looks and how it works.
+              Software, support, and systems that hold up.
             </h2>
           </div>
           <div className="space-y-5 text-lg leading-relaxed text-stone-300">
             <p>
-              I am a Finnish-Nigerian computer science graduate, currently in the master's programme in information technology at Åbo Akademi.
+              I have a strong technical base and a clear interest in IT service management and application support. I pick up new systems quickly and stay organised when the work is under pressure.
             </p>
             <p>
-              I like turning a rough idea into something a person can click through. That has meant a marketplace with accounts and a cart, a study app for a phone, and a thesis on how game data can suggest a strategy.
+              Swedish is my native language. I work fluently in Finnish and English, and I am comfortable in collaborative and user-facing situations.
             </p>
           </div>
         </div>
