@@ -1,4 +1,5 @@
 import { FileText, Github, Linkedin, Mail } from 'lucide-react';
+import { publicUrl } from '../publicUrl';
 
 const links = [
   {

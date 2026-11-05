@@ -10,3 +10,7 @@ npm run dev
 ```
 
 The site opens at http://localhost:5173.
+
+## Live site
+
+GitHub Pages publishes the production build at https://realexminator.github.io/Portfolio/. Pushing to `main` runs the Pages workflow.

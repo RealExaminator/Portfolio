@@ -1,7 +1,8 @@
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
+import { publicUrl } from '../publicUrl';
 
-const portrait = '/assets/aistudio/me_989522cc.PNG';
+const portrait = publicUrl('assets/aistudio/me_989522cc.PNG');
 
 const facts = [
   ['Studying', 'M.Sc. Information Technology'],

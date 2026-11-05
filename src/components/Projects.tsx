@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Github, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { publicUrl } from '../publicUrl';
 
 interface Project {
   id: string;
@@ -23,7 +24,7 @@ const projects: Project[] = [
     category: 'React and Django',
     description: 'A marketplace where people list items, search the catalog, and check out from a cart.',
     longDescription: 'I built the shop front in React and the API in Django. Accounts, listings, the cart, and checkout are real flows, and the catalog is presented like a store you could put in a portfolio. The source is public.',
-    images: ['/assets/webshop-browse.png'],
+    images: [publicUrl('assets/webshop-browse.png')],
     imageAlt: 'WebShop catalog, with product photos, search, and prices',
     tags: ['React', 'Django', 'JavaScript', 'Python'],
     github: 'https://github.com/RealExaminator/Webshop',
@@ -35,8 +36,8 @@ const projects: Project[] = [
     description: 'A phone app for planning study time, with a focus timer and calendar sync.',
     longDescription: 'A student project for staying on top of study hours. The interface is dark, the setup walks through a few choices, and the profile screen sets a focus length and the hours you want to work.',
     images: [
-      '/assets/aistudio/Studyplanner1_48d80712.jpg',
-      '/assets/aistudio/Studyplanner2_bb0325ed.jpg',
+      publicUrl('assets/aistudio/Studyplanner1_48d80712.jpg'),
+      publicUrl('assets/aistudio/Studyplanner2_bb0325ed.jpg'),
     ],
     imageAlt: 'Study Planner profile screen on a phone',
     frame: 'phone',
@@ -48,7 +49,7 @@ const projects: Project[] = [
     category: 'Machine learning',
     description: 'How gameplay data from Teamfight Tactics can be turned into strategic recommendations.',
     longDescription: 'The thesis, written at Åbo Akademi, looks at game data as a strategy problem. I processed match data in Python and used machine learning to look for patterns a player could act on. The degree was awarded in January 2026.',
-    images: ['/assets/aistudio/Bachelor_s_dd2cb964.png'],
+    images: [publicUrl('assets/aistudio/Bachelor_s_dd2cb964.png')],
     imageAlt: "Bachelor's degree certificate from Åbo Akademi",
     frame: 'document',
     cover: 'Teamfight Tactics',
