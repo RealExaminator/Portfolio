@@ -1,5 +1,4 @@
-import { FileText, Github, Linkedin, Mail, Phone } from 'lucide-react';
-import { publicUrl } from '../publicUrl';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const links = [
   {
@@ -7,12 +6,6 @@ const links = [
     label: 'Email',
     value: 'ikennaihetu40@gmail.com',
     icon: Mail,
-  },
-  {
-    href: 'tel:',
-    label: 'Phone',
-    value: '',
-    icon: Phone,
   },
   {
     href: 'https://www.linkedin.com/in/ikenna-ihetu/',
@@ -28,21 +21,6 @@ const links = [
     icon: Github,
     external: true,
   },
-  ];
-
-const cvs = [
-  {
-    href: '',
-    label: 'English',
-    value: '',
-    download: '',
-  },
-  {
-    href: '',
-    label: 'Suomi',
-    value: '',
-    download: '',
-  },
 ];
 
 export default function Contact() {
@@ -55,10 +33,10 @@ export default function Contact() {
             If a role fits, write to me.
           </h2>
           <p className="max-w-md text-stone-400">
-            I am interested in IT service management, application support, and software development. Email and phone both reach me.
+            I am interested in IT service management, application support, and software development. The email goes straight to me.
           </p>
         </div>
-        <div className="mt-12 grid gap-3 sm:grid-cols-2">
+        <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {links.map((link) => {
             const Icon = link.icon;
             return (
@@ -79,24 +57,6 @@ export default function Contact() {
               </a>
             );
           })}
-        </div>
-        <div className="mt-3 grid gap-3 sm:grid-cols-2">
-          {cvs.map((cv) => (
-            <a
-              key={cv.download}
-              href={cv.href}
-              download={cv.download}
-              className="group flex items-center gap-4 rounded-2xl bg-white/5 px-5 py-5 ring-1 ring-white/10 transition-colors hover:bg-[#c2410c] hover:ring-[#c2410c]"
-            >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 group-hover:bg-white/20">
-                <FileText size={18} />
-              </span>
-              <span className="min-w-0">
-                <span className="block text-xs uppercase tracking-[0.14em] text-stone-400 group-hover:text-orange-100">{cv.label}</span>
-                <span className="mt-1 block break-words font-semibold">{cv.value}</span>
-              </span>
-            </a>
-          ))}
         </div>
       </div>
     </section>
