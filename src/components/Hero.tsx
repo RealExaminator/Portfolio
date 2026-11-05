@@ -26,7 +26,7 @@ export default function Hero() {
             Ikenna Ihetu
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-stone-600">
-            Bachelor of Science in Computer Science, now in the Information Technology master's at Åbo Akademi. I build software and applications, work with client-server systems, and troubleshoot technical problems.
+            Bachelor of Science in Computer Science, and now completing my Master's at Åbo Akademi. I build software and applications, work with client-server systems, and troubleshoot technical problems.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a href="#work" className="inline-flex items-center gap-2 rounded-full bg-[#1c1917] px-6 py-3 text-sm font-semibold text-[#f6f3ee] hover:bg-[#c2410c] transition-colors">
