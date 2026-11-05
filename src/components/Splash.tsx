@@ -4,6 +4,24 @@ import { motion } from 'motion/react';
 const PHRASE = 'IT Solutions';
 const COLLAPSE_MS = 200;
 const WIPE_MS = 520;
+const MIN_FIRST_MS = 2400;
+const SEEN_KEY = 'ikenna-splash-seen';
+
+export function splashSeen() {
+  try {
+    return localStorage.getItem(SEEN_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+
+function markSplashSeen() {
+  try {
+    localStorage.setItem(SEEN_KEY, '1');
+  } catch {
+    // Private browsing can block storage. The splash still plays.
+  }
+}
 
 function pageProgress() {
   const images = Array.from(document.images);
@@ -89,6 +107,8 @@ export default function Splash({ onDone }: { onDone: () => void }) {
   const [lineWidth, setLineWidth] = useState(0);
   const [lineTop, setLineTop] = useState(0);
   const lockedCount = useRef(0);
+  const firstVisit = useRef(!splashSeen());
+  const mountedAt = useRef(performance.now());
 
   const onLock = useCallback(() => {
     lockedCount.current += 1;
@@ -112,7 +132,7 @@ export default function Splash({ onDone }: { onDone: () => void }) {
         const due = next >= 1 || next > index / PHRASE.length;
         if (due && !started[index]) {
           started[index] = true;
-          startTimes[index] = performance.now() + batch * 36;
+          startTimes[index] = performance.now() + batch * (firstVisit.current ? 36 : 0);
           batch += 1;
           changed = true;
         }
@@ -147,13 +167,19 @@ export default function Splash({ onDone }: { onDone: () => void }) {
 
   useEffect(() => {
     if (phase !== 'reveal' || progress < 1 || !allLocked) return;
-    if (phraseRef.current) {
-      const phrase = phraseRef.current.getBoundingClientRect();
-      const splash = phraseRef.current.closest('[role="status"]')?.getBoundingClientRect();
-      setLineWidth(phrase.width);
-      if (splash) setLineTop(phrase.top - splash.top + phrase.height / 2);
-    }
-    setPhase(reduced ? 'fade' : 'collapse');
+    const elapsed = performance.now() - mountedAt.current;
+    const hold = firstVisit.current && !reduced ? Math.max(0, MIN_FIRST_MS - elapsed) : 0;
+    const timer = window.setTimeout(() => {
+      if (firstVisit.current) markSplashSeen();
+      if (phraseRef.current) {
+        const phrase = phraseRef.current.getBoundingClientRect();
+        const splash = phraseRef.current.closest('[role="status"]')?.getBoundingClientRect();
+        setLineWidth(phrase.width);
+        if (splash) setLineTop(phrase.top - splash.top + phrase.height / 2);
+      }
+      setPhase(reduced || !firstVisit.current ? 'fade' : 'collapse');
+    }, hold);
+    return () => window.clearTimeout(timer);
   }, [phase, progress, allLocked, reduced]);
 
   useEffect(() => {
@@ -199,7 +225,7 @@ export default function Splash({ onDone }: { onDone: () => void }) {
                 key={`${char}-${index}`}
                 char={char}
                 startAt={starts[index]}
-                reduced={reduced}
+                reduced={reduced || !firstVisit.current}
                 onLock={onLock}
               />
             ))}

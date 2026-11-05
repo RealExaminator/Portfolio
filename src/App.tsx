@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, useScroll, useSpring } from 'motion/react';
 import Navbar from './components/Navbar';
-import Splash from './components/Splash';
+import Splash, { splashSeen } from './components/Splash';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -11,7 +11,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => !(splashSeen() && document.readyState === 'complete'));
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
