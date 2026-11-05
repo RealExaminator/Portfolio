@@ -18,7 +18,7 @@ export default function About() {
           </div>
           <div className="space-y-5 text-lg leading-relaxed text-stone-300">
             <p>
-              I have a strong technical base and a clear interest in IT service management and application support. I pick up new systems quickly and stay organised when the work is under pressure.
+              I have a strong technical base and a clear interest in IT service management and application support. I pick up new systems quickly and stay organised even under pressure.
             </p>
             <p>
               Swedish is my native language. I work fluently in Finnish and English, and I am comfortable in collaborative and user-facing situations.

@@ -118,11 +118,11 @@ export default function Projects() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#c2410c]">01 — Selected work</p>
             <h2 className="mt-4 max-w-xl font-['Outfit'] text-4xl font-semibold tracking-tight sm:text-5xl">
-              Three projects worth opening.
+              Three projects worth checking out.
             </h2>
           </div>
-          <p className="max-w-xs text-sm leading-relaxed text-stone-500">
-            A full-stack shop, a mobile app, and the bachelor’s thesis.
+          <p className="max-w-md text-sm leading-relaxed text-stone-500">
+            A full-stack online shop, a mobile app, and my bachelor’s thesis. If you're interested in more details about these projects, feel free to ask!
           </p>
         </div>
 
